@@ -10,7 +10,7 @@ tags:
     - background color
     - header
 image:
-   thumb: "unsplash_brooklyn-bridge-thumb.jpg"
+   thumb: "dramatictest.jpg"
 header:
     image_fullwidth: "dramatictest.jpg"
     caption: This is a caption for the header image with link
