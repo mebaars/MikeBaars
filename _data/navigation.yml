@@ -1,7 +1,10 @@
-# - title: "Home"
-#   url: "/"
-#   side: left
+ - title: "Home"
+   url: "/"
+   side: left
 
+- title: "Portfolio"
+     url: "/design/portfolio/"
+     
 # - title: lala
 #   url: "/getting-started/"
 #   side: left
@@ -28,8 +31,6 @@
 #     url: "/design/video/"
 #   - title: "Gallery"
 #     url: "/design/gallery/"
-   - title: "Portfolio"
-     url: "/design/portfolio/"
 
 # - title: "Header Styles"
 #   url: "/headers/"
