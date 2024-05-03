@@ -12,7 +12,7 @@ tags:
 image:
    thumb: "unsplash_brooklyn-bridge-thumb.jpg"
 header:
-    image_fullwidth: "dramatic3.3.22a.jpg"
+    image_fullwidth: "dramatictest.jpg"
     caption: This is a caption for the header image with link
     caption_url: https://unsplash.com/
 ---
