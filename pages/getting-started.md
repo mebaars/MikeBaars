@@ -1,4 +1,4 @@
----
+%%%
 layout              : page
 show_meta           : false
 title               : "Getting Started in 10 Steps"
@@ -7,7 +7,7 @@ teaser              : "This step-by-step guide helps you to customize Feeling Re
 header:
    image_fullwidth  : "header_homepage_13.jpg"
 permalink           : "/getting-started/"
----
+%%%
 1. Open `_config.yml` and work it through, it's well documented.
 1. Add your own `logo.png` to `/assets/img/`.
 1. Add your own social media links and open `_data/socialmedia.yml`.
