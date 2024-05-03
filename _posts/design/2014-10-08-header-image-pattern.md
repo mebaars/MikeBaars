@@ -10,7 +10,7 @@ tags:
     - pattern
     - header
 header:
-    image: header_unsplash_2-970x.jpg
+    image: dramatictest.jpg
     pattern: pattern_concrete.jpg
     caption: This is a caption for the header image with link
     caption_url: https://unsplash.com/
