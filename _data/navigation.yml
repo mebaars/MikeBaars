@@ -11,7 +11,7 @@
   side: left
   dropdown:
     - title: "Grid & Colors"
-      url: "/design/grid/"
+      url: "/design/resume/"
     - title: "Typography"
       url: "/design/typography/typography/"
     - title: "Page/Post"
