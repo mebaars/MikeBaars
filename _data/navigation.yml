@@ -1,8 +1,8 @@
-- title: Home
+- title: "Home"
   url: "/"
   side: left
 
- - title: Portfolio
+ - title: "Portfolio"
    url: "/design/portfolio/"
    side: left
 
