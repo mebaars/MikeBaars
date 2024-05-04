@@ -1,10 +1,10 @@
-- title: Start
+- title: Home
   url: "/"
   side: left
 
-# - title: Getting Started
-#   url: "/getting-started/"
-#   side: left
+ - title: Portfolio
+   url: "/design/portfolio/"
+   side: left
 
 # - title: "Templates"
 #   url: "/design/"
