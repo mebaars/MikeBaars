@@ -9,7 +9,7 @@ header:
   image_fullwidth: dramatic_mtns.jpg
 widget1:
   title: "Resume"
-  url: 'https://mebaars.github.io/MikeBaars/design/resume/'
+  url: 'https://mebaars.github.io/MikeBaars/design/resume_v2/'
   image: widget-1-302x182.jpg
   text: '[Intro resume]'
 widget2:
