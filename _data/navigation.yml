@@ -10,7 +10,7 @@
   url: "/design/"
   side: left
   dropdown:
-    - title: "Grid & Colors"
+    - title: "Grid"
       url: "/design/resume/"
     - title: "Typography"
       url: "/design/typography/typography/"
