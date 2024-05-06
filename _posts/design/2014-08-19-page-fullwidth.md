@@ -28,7 +28,7 @@ header:
 
 
 <div class="row">
-    <div class="medium-8 columns t30">
+    <div class="large-8 columns t30">
     <img src="{{ site.urlimg }}gallery-example-7.jpg" alt="">
     </div><!-- /.large-8.columns -->
 
