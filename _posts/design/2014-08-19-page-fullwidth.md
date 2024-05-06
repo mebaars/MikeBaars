@@ -32,11 +32,6 @@ header:
     <img src="{{ site.urlimg }}gallery-example-7.jpg" alt="">
     </div><!-- /.large-8.columns -->
 
-    <div class="medium-4 columns t30">
-      <img src="{{ site.urlimg }}gallery-example-3.jpg" alt="">
-      <img class="t30" src="{{ site.urlimg }}gallery-example-8.jpg" alt="">
-    </div><!-- /.medium-4.columns -->
-
 </div><!-- /.row -->
 
 
