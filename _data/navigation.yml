@@ -30,6 +30,8 @@
       url: "/design/gallery/"
     - title: "Portfolio"
       url: "/design/portfolio/"
+    -title: "Test"
+      url: "/design/test/"
 
 - title: "Header Styles"
   url: "/headers/"
