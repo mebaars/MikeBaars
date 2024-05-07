@@ -5,7 +5,7 @@ subheadline:
 teaser:
 
 categories:
-    - design
+    
 tags:
 header:
     title: ""
