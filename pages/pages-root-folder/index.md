@@ -1,11 +1,11 @@
 ---
 layout: page-fullwidth
-title:  "test"
+title:  ""
 subheadline:
 teaser:
 
 categories:
-    
+    -
 tags:
 header:
     title: ""
