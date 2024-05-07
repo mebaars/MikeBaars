@@ -1,5 +1,5 @@
 ---
-layout: page-fullwidth
+layout: frontpage2
 header:
   image_fullwidth: name_banner.png
 categories:
