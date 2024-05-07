@@ -12,7 +12,8 @@ header:
     background-color: 
     image_fullwidth: name_banner.png
     caption: 
-    caption_url: 
+    caption_url:
+    homepage: true
 ---
 <hr>
 <h2 class="font-size-h3"><strong>Experience</strong></h2>
