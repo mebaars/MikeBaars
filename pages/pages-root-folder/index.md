@@ -1,6 +1,6 @@
 ---
 layout: frontpage
-title:  ""
+title:  "test"
 subheadline:
 teaser:
 
