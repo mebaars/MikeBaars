@@ -2,6 +2,8 @@
 layout: page-fullwidth
 header:
   image_fullwidth: name_banner.png
+catagories:
+  - design
 ---
 <hr>
 <h2 class="font-size-h3"><strong>Experience</strong></h2>
