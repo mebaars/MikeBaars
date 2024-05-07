@@ -1,34 +1,34 @@
 ---
 layout: default
-format: frontpage
+format: page-fullwidth
 ---
-
-<div id="header-home">
-    <!-- Header content goes here -->
-</div><!-- /#header-home -->
-
-<div class="row t60">
-    <!-- Other content for the front page goes here -->
+{% if page.image.title %}
+<div class="row t30">
+	<div class="small-8 columns">
+		<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}">
+		{% if page.image.caption_url and page.image.caption %}
+		<p class="text-right caption">
+			<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+		</p>
+		{% endif %}
+	</div><!-- /.small-12.columns -->
 </div><!-- /.row -->
+{% endif %}
 
-{% comment %}
-*
-* Recent blog posts section
-*
-{% endcomment %}
-{% unless site.posts == empty %}
-    <div class="row t30 b20 homepage">
-        <div class="small-12 columns">
-            <!-- Content for recent blog posts goes here -->
-        </div><!-- /.small-12.columns -->
-    </div><!-- /.row -->
-{% endunless %}
 
-{% comment %}
-*
-* Finally, render the content from the Markdown file
-*
-{% endcomment %}
-<div class="row">
-    {{ content }}
-</div><!-- /.row -->
+<div class="row t30">
+	<div class="medium-12 columns">
+		<article>
+			<header>
+				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+				<h1>{{ page.title }}</h1>
+			</header>
+
+			{% if page.teaser %}
+			<p class="teaser">
+				{{ page.teaser }}
+			</p>
+			{% endif %}
+
+			{{ content }}
+		</article>
