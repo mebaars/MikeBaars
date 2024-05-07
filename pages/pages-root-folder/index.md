@@ -1,9 +1,18 @@
 ---
-layout: frontpage2
-header:
-  image_fullwidth: name_banner.png
+layout: page-fullwidth
+title:  ""
+subheadline:
+teaser:
+
 categories:
-  - design
+    - design
+tags:
+header:
+    title: ""
+    background-color: 
+    image_fullwidth: name_banner.png
+    caption: 
+    caption_url: 
 ---
 <hr>
 <h2 class="font-size-h3"><strong>Experience</strong></h2>
