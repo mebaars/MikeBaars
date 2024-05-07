@@ -1,52 +1,64 @@
 ---
-#
-# Use the widgets beneath and the content will be
-# inserted automagically in the webpage. To make
-# this work, you have to use › layout: frontpage
-#
-layout: frontpage
-header:
-  image_fullwidth: dramatic_mtns.jpg
-widget1:
-  title: "Resume"
-  url: 'https://mebaars.github.io/MikeBaars/design/resume2/'
-  image: widget-1-302x182.jpg
-  text: '[Intro resume]'
-widget2:
-  title: "Why use this theme?"
-  url: 'http://phlow.github.io/feeling-responsive/info/'
-  text: '<em>Feeling Responsive</em> is heavily customizable.<br/>1. Language-Support :)<br/>2. Optimized for speed and it&#39;s responsive.<br/>3. Built on <a href="http://foundation.zurb.com/">Foundation Framework</a>.<br/>4. Seven different Headers.<br/>5. Customizable navigation, footer,...'
-  video: '<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>'
-widget3:
-  title: "Download Theme"
-  url: 'https://github.com/Phlow/feeling-responsive'
-  image: widget-github-303x182.jpg
-  text: '<em>Feeling Responsive</em> is free and licensed under a MIT License. Make it your own and start building. The code is well-documented and explains you how it works.'
-#
-# Use the call for action to show a button on the frontpage
-#
-# To make internal links, just use a permalink like this
-# url: /getting-started/
-#
-# To style the button in different colors, use no value
-# to use the main color or success, alert or secondary.
-# To change colors see sass/_01_settings_colors.scss
-#
-callforaction:
-  url: https://tinyletter.com/feeling-responsive
-  text: Inform me about new updates and features ›
-  style: alert
-permalink: /index.html
-#
-# This is a nasty hack to make the navigation highlight
-# this page as active in the topbar navigation
-#
-homepage: true
----
+layout: page-fullwidth
+title:  ""
+subheadline:
+teaser:
 
-<div id="videoModal" class="reveal-modal large" data-reveal="">
-  <div class="flex-video widescreen vimeo" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
+categories:
+    - design
+tags:
+header:
+    title: ""
+    background-color: 
+    image_fullwidth: name_banner.png
+    caption: 
+    caption_url: 
+---
+<hr>
+<h2 class="font-size-h3"><strong>Experience</strong></h2>
+<h3 class="font-size-h4">E-commerce Clerk, King Soopers</h3>
+<p class="font-size-small">November 2021 - Present</p>
+<ul class="font-size-p">
+<li>Quickly and efficiently built high quality grocery orders.</li>
+<li>Mastered software relevant to all phases of online grocery shopping.</li>
+<li>Eagerly learned procedures to assist other departments.</li>
+</ul>
+
+<h3 class="font-size-h4">Owner, Desertsweet Landscaping</h3>
+<p class="font-size-small">June 2019 - November 2021</p>
+<ul class="font-size-p">
+<li>Effectively engaged with client's to enact their landscaping vision.</li>
+<li>Developed concise landscaping proposals for client approval.</li>
+<li>Approximated budgets for client projects.</li>
+<li>Executed all project phases from planning through installation and follow-up.</li>
+</ul>
+
+<h3 class="font-size-h4">Commercial Fulfillment Foreman, Fossil Creek Nursery</h3>
+<p class="font-size-small">March 2003 - July 2009</p>
+<ul class="font-size-p">
+<li>Sourced species and cultivar specific commercial planting work orders.</li>
+<li>Assessed planting material for health and client specified requirements.</li>
+<li>Meticulously documented pertinent info while gathering plant materials.</li>
+</ul>
+
+<hr>
+<h2 class="font-size-h3"><strong>Education</strong></h2>
+<h3 class="font-size-h4">BS in Horticulture, Colorado State University at Fort Collins</h3>
+<p class="font-size-small">January 2014 - May 2016</p>
+<p class="font-size-p">Food crop production concentration.</p>
+
+<h3 class="font-size-h4">Certification in Geographic Information Systems, Front Range Community College</h3>
+<p class="font-size-small">January 2022 - December 2022</p>
+<p class="font-size-p">Cartography, vector and raster based GIS, GIS management.</p>
+
+<h3 class="font-size-h4">BS in Geographic Information Systems, Front Range Community College</h3>
+<p class="font-size-small">January 2023 - Present</p>
+<p class="font-size-p">Current coursework: spatial modeling</p>
+
+<hr>
+<h2 class="font-size-h3"><strong>Key Skills</strong></h2>
+<ul class="font-size-p">
+<li>Native Tree and Shrub Identification</li>
+<li>ArcGIS Pro</li>
+<li>Python</li>
+<li>FAA-certified Remote Pilot</li>
