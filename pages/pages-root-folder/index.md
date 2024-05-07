@@ -18,7 +18,7 @@ permalink: /index.html
 <hr>
 <h2 class="font-size-h2"><strong>Experience</strong></h2>
 <h3 class="font-size-h3">E-commerce Clerk, King Soopers</h3>
-<p class="font-size-h4">November 2021 - Present</p>
+<p class="font-size-small">November 2021 - Present</p>
 <ul class="font-size-p">
 <li>Quickly and efficiently built high quality grocery orders.</li>
 <li>Mastered software relevant to all phases of online grocery shopping.</li>
