@@ -2,7 +2,6 @@
 layout: frontpage
 header:
   image_fullwidth: name_banner.png
-permalink: false
 ---
 <hr>
 <h2 class="font-size-h3"><strong>Experience</strong></h2>
