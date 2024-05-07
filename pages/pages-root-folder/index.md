@@ -1,5 +1,5 @@
 ---
-layout: frontpage2
+layout: frontpage-v2
 title:  ""
 subheadline:
 teaser:
