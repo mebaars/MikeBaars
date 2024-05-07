@@ -3,11 +3,6 @@ layout: frontpage
 header:
   image_fullwidth: name_banner.png
 permalink: /index.html
-#
-# This is a nasty hack to make the navigation highlight
-# this page as active in the topbar navigation
-#
-homepage: true
 ---
 <hr>
 <h2 class="font-size-h3"><strong>Experience</strong></h2>
