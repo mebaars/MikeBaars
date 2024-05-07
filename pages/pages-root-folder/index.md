@@ -2,7 +2,7 @@
 layout: page-fullwidth
 header:
   image_fullwidth: name_banner.png
-catagories:
+categories:
   - design
 ---
 <hr>
