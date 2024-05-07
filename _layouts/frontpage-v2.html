@@ -4,14 +4,14 @@ format: frontpage-v2
 ---
 {% if page.image.title %}
 <div class="row t30">
-	<div class="small-8 columns">
+	<div class="small-12 columns">
 		<img src="{{ site.urlimg }}{{ page.image.title }}" width="1500" alt="{{ page.title | escape_once }}">
 		{% if page.image.caption_url and page.image.caption %}
 		<p class="text-right caption">
 			<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
 		</p>
 		{% endif %}
-	</div><!-- /.small-8.columns -->
+	</div><!-- /.small-12.columns -->
 </div><!-- /.row -->
 {% endif %}
 
