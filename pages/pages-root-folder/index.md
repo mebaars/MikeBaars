@@ -1,5 +1,5 @@
 ---
-layout: frontpage-v2
+layout: page-fullwidth-v2
 title:  ""
 subheadline:
 teaser:
