@@ -1,6 +1,6 @@
 ---
 layout: frontpage-v2
-title:  "test"
+title:  ""
 subheadline:
 teaser:
 
@@ -8,7 +8,6 @@ categories:
     - design
 tags:
     - design
-    - background color
     - header
 header:
     title: ""
