@@ -7,6 +7,9 @@ teaser:
 categories:
     - design
 tags:
+    - design
+    - background color
+    - header
 header:
     title: ""
     background-color: 
