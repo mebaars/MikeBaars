@@ -12,7 +12,7 @@ tags:
 header:
     title: ""
     background-color: 
-    image_fullwidth: z2.png
+    image_fullwidth: z3.png
     caption: 
     caption_url:
 permalink: /index.html
