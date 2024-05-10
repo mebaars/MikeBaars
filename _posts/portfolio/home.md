@@ -21,10 +21,6 @@ author: mo
 *Feeling Responsive* shows metadata by default. The default behaviour can be changed via `config.yml`. To show metadata at the end of a page/post just add the following to front matter:
 <!--more-->
 
-
-
 ## Other Post Formats
 {: .t60 }
 {% include list-posts tag='post format' %}
-
-
