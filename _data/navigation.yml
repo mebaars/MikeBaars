@@ -7,7 +7,7 @@
   side: left
   dropdown:
     - title: "Test"
-      url: "/design/portfolio/home"
+      url: "/design/portfolio/home/"
      
 - title: "Templates"
   url: "/design/"
