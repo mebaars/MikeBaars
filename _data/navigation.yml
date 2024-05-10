@@ -3,7 +3,7 @@
   side: left
 
 - title: "Portfolio"
-  url: "portfolio/"
+  url: "/portfolio/"
   side: left
   dropdown:
     - title: "Test"
