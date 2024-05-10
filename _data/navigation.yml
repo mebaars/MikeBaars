@@ -3,11 +3,11 @@
   side: left
 
 - title: "Portfolio"
-  url: "/design/portfolio/"
+  url: "portfolio/"
   side: left
   dropdown:
     - title: "Test"
-      url: "/design/portfolio/home/"
+      url: "/portfolio/home/"
      
 - title: "Templates"
   url: "/design/"
