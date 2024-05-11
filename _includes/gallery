@@ -28,13 +28,16 @@
     <ul class="clearing-thumbs small-block-grid-4" data-clearing>
         {% for item in page.gallery %}
         {% capture url %}{{ item.image_url }}{% endcapture %}
-        {% assign split_url = url | split: '.' %}
-        {% assign split_url_part = split_url[0] | split: '/' %}
-        {% assign final_url = split_url_part[1] | append: '_thumb' %}
-        {% capture thumb_url %}{{ final_url }}.jpg{% endcapture %}
+        {% assign split_url = url | split: '/' %}
+        {% assign file_name = split_url | last %}
+        {% assign path = url | remove: file_name %}
+        {% assign split_file_name = file_name | split: '.' %}
+        {% assign base_name = split_file_name[0] %}
+        {% assign extension = split_file_name[1] %}
+        {% assign thumb_name = base_name | append: '_thumb.' | append: extension %}
         <li>
             <a href="{{ site.urlimg }}{{ item.image_url }}">
-                <img {% if item.caption %}data-caption="{{ item.caption }}"{% endif %} src="{{ site.urlimg }}{{ thumb_url }}" alt="{{ item.caption | escape }}">
+                <img {% if item.caption %}data-caption="{{ item.caption }}"{% endif %} src="{{ site.urlimg }}{{ path }}{{ thumb_name }}" alt="{{ item.caption | escape }}">
             </a>
         </li>
         {% endfor %}
