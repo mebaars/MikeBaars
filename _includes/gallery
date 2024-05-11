@@ -37,7 +37,7 @@
         {% assign thumb_name = base_name | append: '_thumb.' | append: extension %}
         <li>
             <a href="{{ site.urlimg }}{{ item.image_url }}">
-                <img {% if item.caption %}data-caption="{{ item.caption }}"{% endif %} src="{{ site.urlimg }}{{ path }}{{ thumb_name }}" alt="{{ item.caption | escape }}">
+                <img src="{{ site.urlimg }}{{ path }}{{ thumb_name }}" alt="{{ item.caption | escape }}" {% if item.caption %}data-caption="{{ item.caption }}"{% endif %}>
             </a>
             {% if item.caption %}
             <div class="caption">{{ item.caption }}</div>
@@ -54,4 +54,3 @@
         margin-top: 5px;
     }
 </style>
-
