@@ -19,7 +19,7 @@
 *
 *   6. Add the include wherever you want in your content like this:
 *
-*   {% include gallery %}
+*   {% raw %}{% include gallery %}{% endraw %}
 *
 *   Check out the example page › http://phlow.github.io/feeling-responsive/design/gallery/
 *
