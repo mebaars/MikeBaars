@@ -29,9 +29,9 @@
         {% for item in page.gallery %}
         {% capture url %}{{ item.image_url }}{% endcapture %}
         {% assign split_url = url | split: '.' %}
-        {% assign split_url = split_url[0] | split: '//' %}
-        {%assign final_url = split_url[1] | append: '_thumb' %}
-        {% capture thumb_url %}{{ final_url }}.{"jpg"}{% endcapture %}
+        {% assign split_url_part = split_url[0] | split: '/' %}
+        {% assign final_url = split_url_part[1] | append: '_thumb' %}
+        {% capture thumb_url %}{{ final_url }}.jpg{% endcapture %}
         <li>
             <a href="{{ site.urlimg }}{{ item.image_url }}">
                 <img {% if item.caption %}data-caption="{{ item.caption }}"{% endif %} src="{{ site.urlimg }}{{ thumb_url }}" alt="{{ item.caption | escape }}">
