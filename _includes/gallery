@@ -34,7 +34,7 @@
         {% assign split_file_name = file_name | split: '.' %}
         {% assign base_name = split_file_name[0] %}
         {% assign extension = split_file_name[1] %}
-        {% assign thumb_name = base_name | append: '_thumb.' | append: 'jpg' %}
+        {% assign thumb_name = base_name | append: '_thumb.' | append: extension %}
         <li>
             <a href="{{ site.urlimg }}{{ item.image_url }}">
                 <img {% if item.caption %}data-caption="{{ item.caption }}"{% endif %} src="{{ site.urlimg }}{{ path }}{{ thumb_name }}" alt="{{ item.caption | escape }}">
