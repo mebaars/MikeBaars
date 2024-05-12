@@ -1,5 +1,27 @@
-# Gallery
-<div class="gallery">
+{% comment %}
+*
+*   Gallery include file.
+*   Specify the main thumbnail and gallery images in the frontmatter:
+*
+*   gallery_thumbnail: path/to/thumbnail.jpg
+*   gallery:
+*     - image_url: path/to/image1.jpg
+*       caption: "Caption for image 1"
+*     - image_url: path/to/image2.jpg
+*       caption: "Caption for image 2"
+*     # Add more images as needed
+*
+{% endcomment %}
+
+{% if page.gallery_thumbnail %}
+<div>
+    <a href="{{ page.url }}#gallery">
+        <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Gallery Thumbnail" class="thumbnail">
+    </a>
+</div>
+{% endif %}
+
+<div id="gallery">
     <ul class="clearing-thumbs small-block-grid-4" data-clearing>
         {% for item in page.gallery %}
         {% capture url %}{{ item.image_url }}{% endcapture %}
@@ -23,10 +45,9 @@
 </div>
 
 <style>
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; /* Adjust gap as needed */
+    .thumbnail {
+        width: 150px; /* Adjust size as needed */
+        height: auto;
     }
     .clearing-thumbs {
         list-style: none;
