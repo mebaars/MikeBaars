@@ -1,30 +1,5 @@
-{% comment %}
-*
-*   This include lets you easily embed a gallery into your post.
-*   To use the gallery include you...
-*
-*   1. ...need two images: a thumbnail and a big image.
-*   2. Name the thumbnail gallery-image-thumb.jpg and...
-*   3. ...name the big gallery-image.jpg
-*   4. Define the big version in frontmatter,
-*
-*   gallery:
-*       - image_url: gallery-image.jpg
-*
-*   5. Give your image a caption – works without captions, too.
-*
-*   gallery:
-*       - image_url: gallery-image.jpg
-*         caption: Starting Page with huge One Logo
-*
-*   6. Add the include wherever you want in your content like this:
-*
-*   {% raw %}{% include gallery %}{% endraw %}
-*
-*   Check out the example page › http://phlow.github.io/feeling-responsive/design/gallery/
-*
-{% endcomment %}
-<div>
+# Gallery
+<div class="gallery">
     <ul class="clearing-thumbs small-block-grid-4" data-clearing>
         {% for item in page.gallery %}
         {% capture url %}{{ item.image_url }}{% endcapture %}
@@ -37,14 +12,38 @@
         {% assign thumb_name = base_name | append: '_thumb.' | append: extension %}
         <li>
             <a href="{{ site.urlimg }}{{ item.image_url }}">
-                <img {% if item.caption %}data-caption="{{ item.caption }}"{% endif %} src="{{ site.urlimg }}{{ path }}{{ thumb_name }}" alt="{{ item.caption | escape }}">
+                <img src="{{ site.urlimg }}{{ path }}{{ thumb_name }}" alt="{{ item.caption | escape }}">
             </a>
+            {% if item.caption %}
+            <div class="caption">{{ item.caption }}</div>
+            {% endif %}
         </li>
         {% endfor %}
     </ul>
 </div>
 
 <style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Adjust gap as needed */
+    }
+    .clearing-thumbs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .clearing-thumbs li {
+        flex: 1 1 calc(25% - 10px); /* Adjust width as needed */
+        box-sizing: border-box;
+    }
+    .clearing-thumbs img {
+        width: 100%;
+        height: auto;
+    }
     .caption {
         text-align: center;
         font-size: 0.9em;
