@@ -1,9 +1,18 @@
+<head>
+    <!-- Other head elements -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Other body elements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+
 {% comment %}
 *
-*   Simplified gallery include file using Foundation Clearing.
-*   Specify the main image and gallery images in the frontmatter:
+*   Gallery include file for Lightbox.
+*   Specify the main thumbnail and gallery images in the frontmatter:
 *
-*   gallery_main_image: path/to/main_image.jpg
+*   gallery_thumbnail: path/to/thumbnail.jpg
 *   gallery:
 *     - image_url: path/to/image1.jpg
 *       caption: "Caption for image 1"
@@ -13,42 +22,29 @@
 *
 {% endcomment %}
 
-{% if page.gallery_thumbnail %}
-<div class="thumbnail">
-    <a href="{{ site.urlimg }}{{ page.gallery_thumbnail }}" data-clearing data-caption="Thumb">
-        <img src="{{ site.urlimg }}{{ page.image_url }}" alt="Thumb" class="thumbnail">
+{% assign main_thumbnail = page.gallery | where: "image_url", page.gallery_thumbnail | first %}
+
+{% if main_thumbnail %}
+<div class="main-thumbnail">
+    <a href="{{ site.urlimg }}{{ main_thumbnail.image_url }}" data-lightbox="gallery" data-title="{{ main_thumbnail.caption | escape }}">
+        <img src="{{ site.urlimg }}{{ main_thumbnail.image_url }}" alt="{{ main_thumbnail.caption | escape }}" class="thumbnail">
     </a>
 </div>
 {% endif %}
 
-<div style="display:none;">
-    <ul class="clearing-thumbs" data-clearing>
-        {% for item in page.gallery %}
-        <li>
-            <a href="{{ site.urlimg }}{{ item.image_url }}" data-clearing data-caption="{{ item.caption | escape }}">
-                <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+{% for item in page.gallery %}
+<a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery" data-title="{{ item.caption | escape }}" style="display:none;">
+    <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
+</a>
+{% endfor %}
 
 <style>
     .thumbnail {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .thumbnail img {
         width: 150px; /* Adjust size as needed */
         height: auto;
     }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var links = document.querySelectorAll('[data-clearing]');
-    if (links.length) {
-        new Foundation.Clearing(links);
+    .main-thumbnail {
+        text-align: center;
+        margin-bottom: 20px;
     }
-});
-</script>
+</style>
