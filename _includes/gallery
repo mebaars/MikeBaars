@@ -1,7 +1,7 @@
 {% comment %}
 *
 *   Gallery include file for Lightbox.
-*   Specify the main thumbnail and gallery images in the frontmatter:
+*   Specify the thumbnail image and gallery images in the frontmatter:
 *
 *   gallery_thumbnail: path/to/thumbnail.jpg
 *   gallery:
@@ -13,17 +13,18 @@
 *
 {% endcomment %}
 
-{% if page.gallery_thumbnail %}
+{% assign first_image = page.gallery | first %}
+
+{% if page.gallery_thumbnail and first_image %}
 <div class="main-thumbnail">
-    <a href="{{ site.urlimg }}{{ page.gallery_thumbnail }}" data-lightbox="gallery" data-title="Gallery">
-        <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Gallery Thumbnail" class="thumbnail">
+    <a href="{{ site.urlimg }}{{ first_image.image_url }}" data-lightbox="gallery" data-title="{{ first_image.caption | escape }}">
+        <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Open Gallery" class="thumbnail">
     </a>
 </div>
 {% endif %}
 
 {% for item in page.gallery %}
 <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery" data-title="{{ item.caption | escape }}" style="display:none;">
-    <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
 </a>
 {% endfor %}
 
