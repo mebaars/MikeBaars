@@ -17,26 +17,19 @@
 
 {% if page.gallery_thumbnail and first_image %}
 <div class="main-thumbnail">
+    <!-- The thumbnail links to the first image in the gallery -->
     <a href="{{ site.urlimg }}{{ first_image.image_url }}" data-lightbox="gallery" data-title="{{ first_image.caption | escape }}">
         <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Open Gallery" class="thumbnail">
     </a>
 </div>
 {% endif %}
 
-<div style="display:none;">
-    <ul class="clearing-thumbs" data-clearing>
-        {% for item in page.gallery %}
-        {% capture url %}{{ item.image_url }}{% endcapture %}
-        {% assign split_url = url | split: '.' %}
-        {% capture thumb_url %}{{ split_url[0] }}-thumb.{{ split_url[1] }}{% endcapture %}
-        <li>
-            <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery" data-title="{{ item.caption | escape }}">
-                <img src="{{ site.urlimg }}{{ thumb_url }}" alt="{{ item.caption }}">
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+<!-- This block ensures all images are part of the Lightbox gallery -->
+{% for item in page.gallery %}
+<a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery" data-title="{{ item.caption | escape }}" style="display:none;">
+    <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
+</a>
+{% endfor %}
 
 <style>
     .thumbnail {
