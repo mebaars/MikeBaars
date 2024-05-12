@@ -15,8 +15,8 @@
 
 {% if page.gallery_thumbnail %}
 <div class="thumbnail">
-    <a href="{{ site.urlimg }}{{ page.gallery_main_image }}" data-clearing data-caption="Main Image">
-        <img src="{{ site.urlimg }}{{ page.gallery_main_image }}" alt="Main Image" class="main-image">
+    <a href="{{ site.urlimg }}{{ page.gallery_thumbnail }}" data-clearing data-caption="Thumb">
+        <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Thumb" class="thumbnail">
     </a>
 </div>
 {% endif %}
