@@ -14,14 +14,14 @@
 {% endcomment %}
 
 {% if page.gallery_thumbnail %}
-<div>
-    <a href="{{ page.url }}#gallery">
+<div class="main-thumbnail">
+    <a href="#gallery">
         <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Gallery Thumbnail" class="thumbnail">
     </a>
 </div>
 {% endif %}
 
-<div id="gallery">
+<div id="gallery" style="display:none;">
     <ul class="clearing-thumbs small-block-grid-4" data-clearing>
         {% for item in page.gallery %}
         {% capture url %}{{ item.image_url }}{% endcapture %}
@@ -70,4 +70,15 @@
         font-size: 0.9em;
         margin-top: 5px;
     }
+    .main-thumbnail {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 </style>
+
+<script>
+document.querySelector('.main-thumbnail a').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('gallery').style.display = 'block';
+});
+</script>
