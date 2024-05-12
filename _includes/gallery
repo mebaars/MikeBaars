@@ -27,10 +27,10 @@
 <!-- Include all gallery images as part of the Lightbox group -->
 <div style="display:none;">
     {% for item in page.gallery %}
-    <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}">
-        <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
-    </a>
-    {% endfor %}
+        <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}">
+            <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
+        </a>
+        {% endfor %}
 </div>
 
 <style>
