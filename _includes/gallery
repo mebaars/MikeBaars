@@ -15,13 +15,13 @@
 
 {% if page.gallery_thumbnail %}
 <div class="main-thumbnail">
-    <a href="#gallery">
+    <a href="{{ page.url }}#gallery-view">
         <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Gallery Thumbnail" class="thumbnail">
     </a>
 </div>
 {% endif %}
 
-<div id="gallery" style="display:none;">
+<div id="gallery-view" style="{% if page.gallery_thumbnail %}display:none;{% else %}display:block;{% endif %}">
     <ul class="clearing-thumbs small-block-grid-4" data-clearing>
         {% for item in page.gallery %}
         {% capture url %}{{ item.image_url }}{% endcapture %}
@@ -77,8 +77,14 @@
 </style>
 
 <script>
-document.querySelector('.main-thumbnail a').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('gallery').style.display = 'block';
+document.addEventListener('DOMContentLoaded', function() {
+    var galleryLink = document.querySelector('.main-thumbnail a');
+    if (galleryLink) {
+        galleryLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('gallery-view').style.display = 'block';
+            galleryLink.style.display = 'none';
+        });
+    }
 });
 </script>
