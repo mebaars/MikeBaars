@@ -16,7 +16,7 @@
 {% if page.gallery_thumbnail %}
 <div class="thumbnail">
     <a href="{{ site.urlimg }}{{ page.gallery_thumbnail }}" data-clearing data-caption="Thumb">
-        <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Thumb" class="thumbnail">
+        <img src="{{ site.urlimg }}{{ page.image_url }}" alt="Thumb" class="thumbnail">
     </a>
 </div>
 {% endif %}
