@@ -1,9 +1,9 @@
 {% comment %}
 *
-*   Gallery include file.
-*   Specify the main thumbnail and gallery images in the frontmatter:
+*   Simplified gallery include file using Foundation Clearing.
+*   Specify the main image and gallery images in the frontmatter:
 *
-*   gallery_thumbnail: path/to/thumbnail.jpg
+*   gallery_main_image: path/to/main_image.jpg
 *   gallery:
 *     - image_url: path/to/image1.jpg
 *       caption: "Caption for image 1"
@@ -14,107 +14,41 @@
 {% endcomment %}
 
 {% if page.gallery_thumbnail %}
-<div class="main-thumbnail">
-    <a href="javascript:void(0);" onclick="openGalleryModal()">
-        <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Gallery Thumbnail" class="thumbnail">
+<div class="thumbnail">
+    <a href="{{ site.urlimg }}{{ page.gallery_main_image }}" data-clearing data-caption="Main Image">
+        <img src="{{ site.urlimg }}{{ page.gallery_main_image }}" alt="Main Image" class="main-image">
     </a>
 </div>
 {% endif %}
 
-<div id="galleryModal" class="gallery-modal" style="display:none;">
-    <div class="gallery-content">
-        <span class="close" onclick="closeGalleryModal()">&times;</span>
-        <ul class="clearing-thumbs small-block-grid-4" data-clearing>
-            {% for item in page.gallery %}
-            {% capture url %}{{ item.image_url }}{% endcapture %}
-            {% assign split_url = url | split: '/' %}
-            {% assign file_name = split_url | last %}
-            {% assign path = url | remove: file_name %}
-            {% assign split_file_name = file_name | split: '.' %}
-            {% assign base_name = split_file_name[0] %}
-            {% assign extension = split_file_name[1] %}
-            {% assign thumb_name = base_name | append: '_thumb.' | append: extension %}
-            <li>
-                <a href="{{ site.urlimg }}{{ item.image_url }}" target="_blank">
-                    <img src="{{ site.urlimg }}{{ path }}{{ thumb_name }}" alt="{{ item.caption | escape }}">
-                </a>
-                {% if item.caption %}
-                <div class="caption">{{ item.caption }}</div>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+<div style="display:none;">
+    <ul class="clearing-thumbs" data-clearing>
+        {% for item in page.gallery %}
+        <li>
+            <a href="{{ site.urlimg }}{{ item.image_url }}" data-clearing data-caption="{{ item.caption | escape }}">
+                <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
 <style>
     .thumbnail {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .thumbnail img {
         width: 150px; /* Adjust size as needed */
         height: auto;
-    }
-    .gallery-modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.9);
-    }
-    .gallery-content {
-        position: relative;
-        margin: auto;
-        padding: 20px;
-        width: 80%;
-        max-width: 800px;
-    }
-    .gallery-content .close {
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        color: #fff;
-        font-size: 35px;
-        font-weight: bold;
-    }
-    .clearing-thumbs {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .clearing-thumbs li {
-        flex: 1 1 calc(25% - 10px); /* Adjust width as needed */
-        box-sizing: border-box;
-    }
-    .clearing-thumbs img {
-        width: 100%;
-        height: auto;
-    }
-    .caption {
-        text-align: center;
-        font-size: 0.9em;
-        margin-top: 5px;
-        color: #fff;
     }
 </style>
 
 <script>
-function openGalleryModal() {
-    document.getElementById('galleryModal').style.display = 'block';
-}
-
-function closeGalleryModal() {
-    document.getElementById('galleryModal').style.display = 'none';
-}
-
-window.onclick = function(event) {
-    var modal = document.getElementById('galleryModal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
+document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('[data-clearing]');
+    if (links.length) {
+        new Foundation.Clearing(links);
     }
-}
+});
 </script>
