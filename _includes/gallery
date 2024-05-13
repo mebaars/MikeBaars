@@ -26,10 +26,11 @@
 
 <!-- Hidden Links for the Lightbox Gallery -->
 </div>
-{% for item in page.gallery %}
-<a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
-{% endfor %}
-
+    {% for item in page.gallery %}
+        <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
+    {% endfor %}
+    </a>
+</div>
 <style>
     .main-thumbnail {
         text-align: center;
