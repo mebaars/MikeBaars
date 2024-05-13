@@ -1,10 +1,49 @@
+{% comment %}
+*
+*   Gallery include file for Lightbox2.
+*   Specify the thumbnail image and gallery images in the frontmatter:
+*
+*   gallery_thumbnail: path/to/thumbnail.jpg
+*   gallery:
+*     - image_url: path/to/image1.jpg
+*       caption: "Caption for image 1"
+*     - image_url: path/to/image2.jpg
+*       caption: "Caption for image 2"
+*     # Add more images as needed
+*
+{% endcomment %}
+
+<!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+{% assign first_image = page.gallery | first %}
+
 {% if page.gallery_thumbnail and first_image %}
 <div class="main-thumbnail">
     <!-- Thumbnail links to the first image in the gallery -->
     <a href="{{ site.urlimg }}{{ first_image.image_url }}" data-lightbox="gallery-set" data-title="{{ first_image.caption | escape }}">
+        <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Open Gallery" class="thumbnail">
     </a>
 </div>
 {% endif %}
 
+<!-- Include all gallery images as part of the Lightbox group -->
+<div style="display:none;">
+    {% for item in page.gallery %}
+    <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
+    {% endfor %}
+</div>
 
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/lightbox.js"></script>
+<style>
+    .main-thumbnail {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .main-thumbnail img {
+        width: 150px; /* Adjust size as needed */
+        height: auto;
+    }
+</style>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
