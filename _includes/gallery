@@ -26,24 +26,21 @@
 
 <!-- Include all gallery images as part of the Lightbox group -->
 <div style="display:none;">
-    <ul class="clearing-thumbs" data-clearing>
-        {% for item in page.gallery %}
-        <li>
-            <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}">
-                <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    {% for item in page.gallery %}
+    <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
+    {% endfor %}
 </div>
 
 <style>
-    .thumbnail {
-        width: 150px; /* Adjust size as needed */
-        height: auto;
-    }
     .main-thumbnail {
         text-align: center;
         margin-bottom: 20px;
     }
+    .main-thumbnail img {
+        width: 150px; /* Adjust size as needed */
+        height: auto;
+    }
 </style>
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
