@@ -13,7 +13,7 @@
 *
 {% endcomment %}
 
-<link href="assets/css/lightbox.css" rel="stylesheet" />
+<link href="{{url}}/assets/css/lightbox.css" rel="stylesheet" />
 
 {% assign first_image = page.gallery | first %}
 
@@ -44,4 +44,4 @@
     }
 </style>
 
-<script src="assets/ccs/lightbox.js"></script>
+<script src="{{url}}/assets/ccs/lightbox.js"></script>
