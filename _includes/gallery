@@ -25,7 +25,7 @@
 </div>
 
 <!-- Hidden Links for the Lightbox Gallery -->
-</div class="gallery">
+<div style="display:none;">
     {% for item in page.gallery %}
         <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
     {% endfor %}
