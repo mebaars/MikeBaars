@@ -13,9 +13,6 @@
 *
 {% endcomment %}
 
-<!-- Lightbox CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-
 {% assign first_image = page.gallery | first %}
 
 {% if page.gallery_thumbnail and first_image %}
@@ -50,6 +47,3 @@
         margin-bottom: 20px;
     }
 </style>
-
-<!-- Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
