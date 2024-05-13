@@ -19,8 +19,8 @@
 
 
 <div class="main-thumbnail">
-    <a href="{{ site.urlimg }}/layout_9_26_23.jpg" data-lightbox="gallery-set" data-title="Image 1 Caption">
-        <img src="{{ site.urlimg }}/layout_3_12_24_thumb.jpg" alt="Open Gallery" class="thumbnail">
+    <a href="{{ site.urlimg }}output_doc/layout_9_26_23.jpg" data-lightbox="gallery-set" data-title="Image 1 Caption">
+        <img src="{{ site.urlimg }}output_doc/layout_3_12_24_thumb.jpg" alt="Open Gallery" class="thumbnail">
     </a>
 </div>
 
