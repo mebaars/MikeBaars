@@ -27,7 +27,7 @@
 {% endif %}
 
 <!-- Include all gallery images as part of the Lightbox group -->
-<div style="display:none;">
+<div class="gallery">
     {% for item in page.gallery %}
     <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
     {% endfor %}
