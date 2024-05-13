@@ -21,6 +21,12 @@
     <a href="{{ site.urlimg }}{{ first_image.image_url }}" data-lightbox="gallery-set" data-title="{{ first_image.caption | escape }}">
         <img src="{{ site.urlimg }}{{ page.gallery_thumbnail }}" alt="Open Gallery" class="main-thumbnail">
     </a>
+    {% for item in page.gallery %}
+        <li>
+            <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}">
+                <img src="{{ site.urlimg }}{{ item.image_url }}" alt="{{ item.caption | escape }}">
+            </a>
+        </li>
 </div>
 {% endif %}
 
