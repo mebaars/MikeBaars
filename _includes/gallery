@@ -41,6 +41,4 @@
         height: auto;
     }
 </style>
-
-<!-- Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/lightbox.js"></script>
