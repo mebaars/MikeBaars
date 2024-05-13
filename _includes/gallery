@@ -22,10 +22,10 @@
     <a href="{{ site.urlimg }}output_doc/layout_9_26_23.jpg" data-lightbox="gallery-set" data-title="Image 1 Caption">
         <img src="{{ site.urlimg }}{{page.gallery_thumbnail}}" alt="Open Gallery" class="thumbnail">
     </a>
-</div>
+</div class>
 
 <!-- Hidden Links for the Lightbox Gallery -->
-</div>
+</div class="gallery">
     {% for item in page.gallery %}
         <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
     {% endfor %}
