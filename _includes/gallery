@@ -22,7 +22,7 @@
     <a href="{{ site.urlimg }}output_doc/layout_9_26_23.jpg" data-lightbox="gallery-set" data-title="Image 1 Caption">
         <img src="{{ site.urlimg }}{{page.gallery_thumbnail}}" alt="Open Gallery" class="thumbnail">
     </a>
-</div class>
+</div>
 
 <!-- Hidden Links for the Lightbox Gallery -->
 </div class="gallery">
