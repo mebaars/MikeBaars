@@ -8,7 +8,6 @@ layout: compress
 	{% include _head.html %}
 </head>
 <body id="top-of-page" class="{{ layout.format }}">
-	<script src="{{ site.url }}{{ site.baseurl }}/asset/js/lightbox.min.js"></script>
 	{% unless page.skip_boilerplate %}
 	{% include _navigation.html %}
 	{% endunless %}
@@ -21,6 +20,6 @@ layout: compress
 	{% endunless %}
 
 	{% include _footer_scripts.html %}
-	
+	<script src="{{ site.url }}{{ site.baseurl }}/asset/js/lightbox.min.js"></script>
 </body>
 </html>
