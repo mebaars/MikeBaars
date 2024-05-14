@@ -4,7 +4,7 @@ layout: compress
 <!doctype html>
 <html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
 <head>
-	<link rel="stylesheet" href="{{ url }}/assets/css/lightbox.min.css">
+	<link href="path/to/lightbox.css" rel="stylesheet" />
 	{% include _head.html %}
 </head>
 <body id="top-of-page" class="{{ layout.format }}">
@@ -19,7 +19,7 @@ layout: compress
 	{% include _footer.html %}
 	{% endunless %}
 
+	<script src="path/to/lightbox.js"></script>
 	{% include _footer_scripts.html %}
-	<script src="{{ site.url }}{{ site.baseurl }}/asset/js/lightbox.min.js"></script>
 </body>
 </html>
