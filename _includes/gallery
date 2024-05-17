@@ -13,11 +13,20 @@
 *
 {% endcomment %}
 
+
 <div class="main-thumbnail">
-    <a href="{{ site.urlimg }}output_doc/layout_9_26_23.jpg" data-lightbox="gallery-set" data-title="Image 1 Caption">
-      <img src="{{ site.urlimg }}{{page.gallery_thumbnail}}" alt="Open Gallery">
-    </a>
-</div>
+    <figure>
+      <a href="{{ site.urlimg }}output_doc/layout_9_26_23.jpg" data-lightbox="gallery-set">
+        <img src="{{ site.urlimg }}{{page.gallery_thumbnail}}" alt="Open Gallery">
+      </a>
+      {% if page.gallery_thumbnail_caption %}
+      <figcaption class="text-left caption">
+        {{ page.gallery_thumbnail_caption }}
+      </figcaption>
+      {% endif %}
+    </figure>
+  </div>
+  
 
 <!-- Hidden Links for the Lightbox Gallery -->
 <div style="display:none;">
@@ -26,13 +35,3 @@
     {% endfor %}
     </a>
 </div>
-<style>
-    .main-thumbnail {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .main-thumbnail img {
-        width: 150px; /* Adjust size as needed */
-        height: auto;
-    }
-</style>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jekyll Lightbox Example</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/fslightbox@3"></script>
+</head>
+<body>
+  <div class="container">
+    <button id="open-lightbox">Open the lightbox</button>
+  </div>
+
+  <script>
+    document.getElementById('open-lightbox').addEventListener('click', () => {
+      // Open the lightbox
+      fsLightboxInstances['gallery'].open();
+    });
+
+    // Initialize fslightbox
+    fsLightboxInstances['gallery'].props.sources = [
+      '/assets/img/Example.jpg',
+      'https://i.imgur.com/fsyrScY.jpg',
+      'https://www.youtube.com/watch?v=3nQNiWdeH2Q',
+      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+    ];
+  </script>
+</body>
+</html>
