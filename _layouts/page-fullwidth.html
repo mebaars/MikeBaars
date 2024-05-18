@@ -26,7 +26,7 @@ format: page-fullwidth
     <img src="{{ site.urlimg }}{{ page.image.title }}" alt="{{ page.title | escape_once }}">
     {% if page.image.caption_url and page.image.caption %}
     <p class="text-left caption">
-      <a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+      <a href="{{ site.urlimg }}{{ page.image.caption_url }}"</a>
     </p>
     {% endif %}
   </div><!-- /.small-12.columns -->
