@@ -6,8 +6,8 @@
   url: "/portfolio/"
   side: left
   dropdown:
-    - title: "Test"
-      url: "/portfolio/home/"
+    - title: "UAV Construction Site Monitoring"
+      url: "/pages/portfolio/home/"
      
 - title: "Templates"
   url: "/design/"
