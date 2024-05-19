@@ -7,7 +7,7 @@ image:
     title: output_doc/ks_perspective_4_5.jpg
     caption: "Construction at College Ave and Drake Road 4/5/24"
     caption_url: output_doc/ks_perspective_4_5.jpg
-text_body: "On an approximately bi-monthly interval, beginning in August 2023, I collected UAV imagery of an active construction site in Fort Collins, Colorado. In preperation for this project, The mission a gridded flight plan was created using ancient.lands and imported into Litchi to set camera and timing parameters. Using Litchi, the plan was flown with a DJI Air 2S and used virtual stick control to capture replicatable imagery over the target site. The imagery was captured as raw files and processed using Rawtherapee to output jpg files. Finally, using WebODM an orthomosaic geoTiff and processing report were generated for each flight."
+text_body: "On an approximately bi-monthly interval, beginning in August 2023, I collected UAV imagery of an active construction site in Fort Collins, Colorado. In preperation for this project, The mission a gridded flight plan was created using ancient.lands and imported into Litchi to set camera and timing parameters. Using Litchi, the plan was flown with a DJI Air 2S and used virtual stick control to capture replicatable imagery over the target site. The imagery was captured as raw files and processed using Rawtherapee to output jpg files. Finally, using WebODM an orthomosaic geoTiff and quality report were generated for each flight."
 categories:
     - portfolio
 
@@ -25,14 +25,30 @@ gallery:
     - image_url: output_doc/layout_2_24_24.jpg
     - image_url: output_doc/layout_3_1_24.jpg
     - image_url: output_doc/layout_3_12_24.jpg
+pdf_file: output_doc/ks_04_05_report.pdf
+pdf_thumb: output_doc/report_thumb.jpg
+pdf_thumb_caption: "Click to open quality report"
 ---
 
 <div class="row">
-  <div class="medium-6 columns t60">
+  <div class="medium-6 columns t20">
     {% include gallery %}
   </div>
 
-  <div class="medium-6 columns t80">
+  <div class="medium-6 columns t20">
     <p class="font-size-h4">{{ page.text_body}}</p>
   </div>
+</div>
+
+<div class="small-12 small-push-1 columns t20">
+  <figure>
+    <a class="link-lightbox" href="https://drive.google.com/file/d/1nb7Zpn1Y65Q8FvNdi5gspP5biKxwyewk/preview" target="_blank">
+      <img src="{{ site.urlimg }}{{ page.pdf_thumb }}" alt="Open PDF" style="max-width: 300px;" />
+      </a>
+      {% if page.pdf_thumb_caption %}
+      <figcaption class="text-left caption">
+        {{ page.pdf_thumb_caption }}
+      </figcaption>
+      {% endif %}
+  </figure>
 </div>
