@@ -4,7 +4,7 @@
   dropdown:
     
 - title: "Portfolio"
-  url: "/"
+  url: ""
   side: left
   dropdown:
     - title: "UAV Construction Site Monitoring"
