@@ -26,7 +26,7 @@ gallery:
     - image_url: output_doc/layout_3_1_24.jpg
     - image_url: output_doc/layout_3_12_24.jpg
 pdf_file: output_doc/ks_04_05_report.pdf
-pdf_thumb: output_doc/report_thumb.jpg
+pdf_thumb: output_doc/report_tmb.jpg
 pdf_thumb_caption: "Click to open quality report"
 ---
 
