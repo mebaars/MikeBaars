@@ -1,11 +1,8 @@
-- title: "Home"
+- title: "Portfolio"
   url: "/"
   side: left
   dropdown:
-    
-- title: "Portfolio"
-  url: ""
-  side: left
-  dropdown:
     - title: "UAV Construction Site Monitoring"
-      url: "/pages/portfolio/home/"
+      url: "/pages/portfolio/ks_UAV/"
+    - title: "Cloud Masking Using Python and JAvascript"
+      url: "/pages/portfolio/cld_msk/"

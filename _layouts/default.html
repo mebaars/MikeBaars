@@ -4,8 +4,19 @@ layout: compress
 <!doctype html>
 <html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
 <head>
-	<link href="{{ site.urlimg }}assets/css/lightbox.min.css" rel="stylesheet" />
+	<link href="{{ site.url }}{{ site.baseurl }}/assets/css/iframe_modal.css" rel="stylesheet" />
+	<link href="{{ site.url }}{{ site.baseurl }}/assets/css/lightbox.min.css" rel="stylesheet" />
 	{% include _head.html %}
+	
+	<style>
+        body {
+            color: {{page.text_color}}; /* Universal text color for the entire page */
+        }
+    </style>
+	{% if page.pdf_file %}
+    <!-- Include PDF.js library if a PDF is specified -->
+    {% include pdfjs.html %}
+  	{% endif %}
 </head>
 <body id="top-of-page" class="{{ layout.format }}">
 	{% unless page.skip_boilerplate %}
@@ -15,11 +26,16 @@ layout: compress
 	{% include _masthead.html %}
 	{{ content }}
 
+	{% if page.background_color %}
+	<body style="background-color: {{page.background_color}};"></body>
+	{% endif %}
+	
 	{% unless page.skip_boilerplate %}
 	{% include _footer.html %}
 	{% endunless %}
 
 	{% include _footer_scripts.html %}
-	<script src="{{ site.urlimg }}assets/js/lightbox.min.js"></script>
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/lightbox.min.js"></script>
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/js/iframe_script.js"></script>
 </body>
 </html>

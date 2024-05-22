@@ -1,0 +1,5 @@
+  .clickable-icon img {
+    cursor: pointer;
+    width: 100%; /* Adjust as necessary */
+    max-width: 100px; /* Adjust the icon size as necessary */
+  }

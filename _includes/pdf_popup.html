@@ -1,0 +1,13 @@
+<div class="grid-container t40 pl40" style="border-dotted; background-color: #E8D9CD; padding-top: 20px; padding-bottom: 20px">
+  <!-- Clickable Icon -->
+  <div class="clickable-icon">
+    <a href="{{site.urlimg}}{{page.pdf_file}}" target="_blank">
+      <img src="{{ site.urlimg }}{{ page.pdf_thumb }}" alt="Open PDF" style="max-width: 65%">
+    </a>
+  </div>
+  {% if page.pdf_thumb_caption %}
+      <figcaption class="text-left caption" style=" color: #000000">
+        {{ page.pdf_thumb_caption }}
+      </figcaption>
+    {% endif %}
+</div>
