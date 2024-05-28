@@ -1,0 +1,8 @@
+// _mb_custom.scss
+
+p, h1, h2, h3, h4, h5, h6, span, div {
+    overflow-wrap: break-word; /* Ensures long words break to avoid overflow */
+    word-break: normal; /* Prevents breaking within words */
+    hyphens: none; /* Disables hyphenation */
+    white-space: normal; /* Allows normal wrapping */
+}

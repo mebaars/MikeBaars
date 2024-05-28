@@ -20,7 +20,7 @@
         <img src="{{ site.urlimg }}{{page.gallery_thumbnail}}" alt="Open Gallery">
       </a>
       {% if page.gallery_thumbnail_caption %}
-      <figcaption class="text-left caption" style=" color: #FFFFFF">
+      <figcaption class="text-left caption" style="color: #FFFFFF">
         {{ page.gallery_thumbnail_caption }}
       </figcaption>
       {% endif %}

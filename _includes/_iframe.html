@@ -1,0 +1,15 @@
+<div id="openModal">
+    <a href="{{page.dashboard_url}}" target="_blank">
+        <img src="{{ site.url }}{{ site.baseurl }}/{{page.dashboard_thumb_url}}" alt="Open Modal Icon" />
+    </a>
+    {{% if page.dashboard_thumb_caption %}}
+        <div class="caption">{{ page.dashboard_thumb_caption }}</div>
+    {{% endif %}}
+</div>
+
+
+<div id="iframeModal" class="modal">
+    <div class="modal-content">
+        <iframe src="{{page.dashboard_url}}"></iframe>
+    </div>
+</div>

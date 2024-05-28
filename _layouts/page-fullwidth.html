@@ -23,10 +23,10 @@ format: page-fullwidth
 {% if page.image.title %}
 <div class="row t20">
   <div class="medium-12 columns">
-    <img src="{{ site.urlimg }}{{ page.image.title }}" alt="{{ page.title | escape_once }}">
+    <img src="{{ site.url }}{{ site.baseurl }}/{{ page.image.title }}" alt="{{ page.title | escape_once }}">
     {% if page.image.caption_url and page.image.caption %}
-    <p class="text-left cap">
-      <a href="{{ site.urlimg }}{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+    <p class="text-left cap" style="color:#FFFFFF">
+      <a href="{{ site.url }}{{ site.baseurl }}/{{ page.image.caption_url }}" style= color:#FFFFFF>{{ page.image.caption }}</a>
     </p>
     {% endif %}
   </div><!-- /.small-12.columns -->
