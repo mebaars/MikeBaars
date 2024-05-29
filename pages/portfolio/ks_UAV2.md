@@ -54,7 +54,7 @@ background_color: "#42667E"
 <div class="row">
   <!-- Small screens layout -->
   <div class="small-12 columns t20 show-for-small-only">
-    <div class="text-fields" style="color: #000000; border: 2px solid #BEBEBE; padding-left: 20px; padding-right: 20px; padding-top: 5px; background-color: #859DAC;">
+    <div class="text-fields" style="color: #000000; border: 1px solid #BEBEBE; padding-left: 20px; padding-right: 20px; padding-top: 5px; background-color: #859DAC;">
       <p class="font-size-h4 adaptive-text">{{ page.text_body }}</p>
     </div>
   </div>
@@ -64,7 +64,7 @@ background_color: "#42667E"
     </div>
   </div>
   <div class="small-12 columns t20 show-for-small-only">
-    <div class="text-fields" style="color: #000000; border: 2px solid #BEBEBE; padding-left: 20px; padding-right: 20px; padding-top: 5px; background-color: #859DAC;">
+    <div class="text-fields" style="color: #000000; border: 1px solid #BEBEBE; padding-left: 20px; padding-right: 20px; padding-top: 5px; background-color: #859DAC;">
       <p class="font-size-h4 adaptive-text">{{ page.text_body2 }}</p>
     </div>
   </div>

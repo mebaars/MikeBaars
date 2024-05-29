@@ -3,8 +3,8 @@
   side: left
   dropdown:
     - title: "UAV Construction Site Monitoring"
-      url: "/pages/portfolio/ks_UAV/"
+      url: "/pages/portfolio/ks_UAV2/"
     - title: "Cloud Masking Using Python and JAvascript"
       url: "/pages/portfolio/cld_msk/"
     - title: "Fort Collins, Colorado Residential Solar Assessment"
-      url: "/pages/portfolio/FTC_solar/"
+      url: "/pages/portfolio/FTC_solar_v3/"

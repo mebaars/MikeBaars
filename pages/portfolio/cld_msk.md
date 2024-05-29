@@ -25,15 +25,15 @@ categories:
   </div>
   
   <!-- Small screens layout -->
-  <div class="small-12 columns show-for-small-only">
+  <div class="small-12 columns t20 show-for-small-only">
     <p class="font-size-h4">{{ page.text_body[0] }}</p>
   </div>
-  <div class="small-12 columns show-for-small-only">
+  <div class="small-12 columns t20 show-for-small-only">
     <div class="iframe">
       {% include storymap.html %}
     </div>
   </div>
-  <div class="small-12 columns show-for-small-only">
+  <div class="small-12 columns t20 show-for-small-only">
     <p class="font-size-h4">{{ page.text_body[1] }}</p>
     <p class="font-size-h4">{{ page.text_body[2] }}</p>
   </div>
