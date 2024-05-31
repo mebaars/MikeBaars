@@ -6,6 +6,11 @@ text_body:
   - "Cloud contamination is a common barrier to studies involving the Earth's surface, limiting the quality and amount of usable data."
   - "As a final project, I researched cloud masking methods. Specifically, I focused on using Google Earth Engine and the S2cloudless dataset as applied to Sentinel-2 imagery."
   - "Working on this project was beneficial because I learned about several methods for cloud masking and acquired practical knowledge in applying cloud masking in Google Earth Engine. Additionally, I gained experience in writing code in Python and JavaScript."
+dashboard_url: "https://storymaps.arcgis.com/stories/9256067cfabc47388f073f639d29dba6"
+dashboard_thumb_url: "output_doc/storymap_icon.png"
+dashboard_thumb_caption: "Click image to open the Storymap in a new window"
+
+
 categories:
   - portfolio
 ---
@@ -14,7 +19,7 @@ categories:
   <!-- Medium and larger screens layout -->
   <div class="medium-8 columns t20 hide-for-small-only">
     <div class="iframe">
-      {% include storymap.html %}
+      {% include _iframe.html %}
     </div>
   </div>
   
@@ -30,7 +35,7 @@ categories:
   </div>
   <div class="small-12 columns t20 show-for-small-only">
     <div class="iframe">
-      {% include storymap.html %}
+      {% include _iframe.html %}
     </div>
   </div>
   <div class="small-12 columns t20 show-for-small-only">
