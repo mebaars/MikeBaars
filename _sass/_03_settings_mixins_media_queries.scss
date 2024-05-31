@@ -465,6 +465,7 @@ $cursor-text-value: text !default;
       display: none !important;
       visibility: hidden;
     }
+    
 
     // Hide visually and from screen readers, but maintain layout
     .invisible {
@@ -501,4 +502,11 @@ $cursor-text-value: text !default;
       width: 100%;
     }
   }
+// Custom class for medium and larger screens
+@media #{$medium-up} {
+  .ml-200px {
+    margin-left: 200px !important;
+  }
+}
+
 }

@@ -13,25 +13,23 @@
 *
 {% endcomment %}
 
-
-<div class="main-thumb">
-    <figure>
-      <a href="{{ site.urlimg }}output_doc/layout_9_26_23.jpg" data-lightbox="gallery-set" style="max-width: 100%;">
-        <img src="{{ site.urlimg }}{{page.gallery_thumbnail}}" alt="Open Gallery">
-      </a>
-      {% if page.gallery_thumbnail_caption %}
+<!-- Main Thumbnail -->
+<div class="main-thumb hide-for-medium hide-for-large">
+  <figure>
+    <a href="{{ site.url }}{{ site.baseurl }}/gallery/layout_9_26_23.jpg" data-lightbox="gallery-set" style="max-width: 100%;">
+      <img src="{{ site.url }}{{ site.baseurl }}/{{ page.gallery_thumbnail }}" alt="Open Gallery">
+    </a>
+    {% if page.gallery_thumbnail_caption %}
       <figcaption class="text-left caption" style="color: #FFFFFF">
         {{ page.gallery_thumbnail_caption }}
       </figcaption>
-      {% endif %}
-    </figure>
-  </div>
-  
+    {% endif %}
+  </figure>
+</div>
 
 <!-- Hidden Links for the Lightbox Gallery -->
 <div style="display:none;">
-    {% for item in page.gallery %}
-        <a href="{{ site.urlimg }}{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
-    {% endfor %}
-    </a>
+  {% for item in page.gallery %}
+    <a href="{{ site.url }}{{ site.baseurl }}/{{ item.image_url }}" data-lightbox="gallery-set" data-title="{{ item.caption | escape }}"></a>
+  {% endfor %}
 </div>
