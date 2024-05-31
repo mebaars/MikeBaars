@@ -39,7 +39,7 @@ background_color: "#42667E"
       <p class="font-size-h4 adaptive-text">{{ page.text_body }}</p>
     </div>
 </div>
-<div class="small-12 medium-5 columns t20 ml-200px">
+<div class="small-12 medium-5 columns t20">
   <div class="gallery">
     {% include gallery %}
   </div>
