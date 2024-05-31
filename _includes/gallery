@@ -14,7 +14,7 @@
 {% endcomment %}
 
 <!-- Main Thumbnail -->
-<div class="main-thumb hide-for-medium hide-for-large">
+<div class="main-thumb">
   <figure>
     <a href="{{ site.url }}{{ site.baseurl }}/gallery/layout_9_26_23.jpg" data-lightbox="gallery-set" style="max-width: 100%;">
       <img src="{{ site.url }}{{ site.baseurl }}/{{ page.gallery_thumbnail }}" alt="Open Gallery">
