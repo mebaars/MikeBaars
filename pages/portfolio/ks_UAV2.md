@@ -39,7 +39,7 @@ background_color: "#42667E"
       <p class="font-size-h4 adaptive-text">{{ page.text_body }}</p>
     </div>
 </div>
-<div class="small-12 medium-4 columns t20 ml-200px">
+<div class="small-12 medium-5 columns t20 ml-200px">
   <div class="gallery">
     {% include gallery %}
   </div>
@@ -59,7 +59,7 @@ background_color: "#42667E"
 </div>
 <!-- Medium and large screens layout -->
 <div class="row hide-for-small-only">
-  <div class="medium-6 columns t20">
+  <div class="medium-5 columns t20">
     <div class="text-fields" style="color: #000000; border: 2px solid #BEBEBE; padding-left: 20px; padding-right: 20px; padding-top: 5px; background-color: #859DAC;">
       <p class="font-size-h4 adaptive-text">{{ page.text_body }}</p>
       <p class="font-size-h4 t20 adaptive-text">{{ page.text_body2 }}</p>
