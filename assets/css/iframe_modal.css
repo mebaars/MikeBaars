@@ -1,67 +1,47 @@
+.container {
+  margin: 10px;
+}
+
+.title {
+  background-color: #5A4246;
+}
+
+h2, h3 {
+  color: #FFFFFF;
+  padding-left: 20px;
+  margin: 0px;
+}
+
+.body_txt {
+  padding: 20px;
+}
+
+.lead_txt {
+  padding: 20px;
+}
+
+.iframe_box {
+  padding-bottom: 20px;
+}
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Hide overflow */
-  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
 }
 
 .modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 800px; /* Adjust based on your needs */
   background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
   border: 1px solid #888;
-  box-sizing: border-box; /* Ensure padding is included in the width */
-  padding: 20px; /* Adjust based on your needs */
-  overflow: hidden; /* Hide overflow */
-}
-
-.modal.show {
-  display: block; /* Show the modal when the class "show" is added */
-}
-
-@media (max-width: 600px) {
-  .modal-content {
-    width: 95%;
-    height: 95%;
-  }
-
-  .close {
-    font-size: 24px;
-    top: 5px;
-    right: 10px;
-  }
-}
-
-#openModalButton {
-  width: auto;
-  max-width: 100%; /* Ensure the image is responsive */
-  border: 2px solid #000000;
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+  width: 80%;
 }

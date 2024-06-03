@@ -1,23 +1,3 @@
-<style>
-    .return-button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .return-button:hover {
-      background-color: #45a049;
-    }
-  </style>
-
 <div id="openModal">
     <a href="{{page.dashboard_url}}" target="_blank">
         <img src="{{ site.url }}{{ site.baseurl }}/{{page.dashboard_thumb_url}}" alt="Open Modal Icon" />
@@ -31,6 +11,5 @@
 <div id="iframeModal" class="modal">
     <div class="modal-content">
         <iframe src="{{page.dashboard_url}}"></iframe>
-        <button class="return-button" onclick="window.location.href='{{ site.url }}{{ site.baseurl }}'">Return to Portfolio</button>
     </div>
 </div>

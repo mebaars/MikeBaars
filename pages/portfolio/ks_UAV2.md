@@ -2,7 +2,7 @@
 layout: page-fullwidth
 text_color: '#FFFFFF'
 image: 
-    title: output_doc/ks_perspective_4_5b.jpg
+    title: output_doc/ks_perspective_4_5c.jpg
     caption: "Construction at College Ave and Drake Road 4/5/24"
     caption_url: output_doc/ks_perspective_4_5.jpg
 text_body: "Beginning in August 2023, on an approximately bi-monthly interval, UAV imagery was captured for an active construction site in Fort Collins, Colorado. In preperation for this project, a gridded flight plan was created using ancient.lands and imported into Litchi to set camera and flight parameters. Litchi was then used to execute the plan with a DJI Air 2S, utilizing virtual stick control to capture consistent imagery over the target site."
@@ -33,13 +33,19 @@ pdf_thumb: output_doc/report_tmb.jpg
 pdf_thumb_caption: "Click to open quality report"
 background_color: "#42667E"
 ---
+<style>
+  .gallery-box {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  </style>
 <!-- Small screens layout -->
 <div class="small-12 columns t20 show-for-small-only">
     <div class="text-fields" style="color: #000000; border: 1px solid #BEBEBE; padding-left: 20px; padding-right: 20px; padding-top: 5px; background-color: #859DAC;">
       <p class="font-size-h4 adaptive-text">{{ page.text_body }}</p>
     </div>
 </div>
-<div class="small-12 medium-5 columns t20">
+<div class="gallery-box small-12 medium-6 medium-push-1 columns t20">
   <div class="gallery">
     {% include gallery %}
   </div>
@@ -59,7 +65,7 @@ background_color: "#42667E"
 </div>
 <!-- Medium and large screens layout -->
 <div class="row hide-for-small-only">
-  <div class="medium-5 columns t20">
+  <div class="medium-5 medium-push-1 columns t20" style="margin-left: 20px">
     <div class="text-fields" style="color: #000000; border: 2px solid #BEBEBE; padding-left: 20px; padding-right: 20px; padding-top: 5px; background-color: #859DAC;">
       <p class="font-size-h4 adaptive-text">{{ page.text_body }}</p>
       <p class="font-size-h4 t20 adaptive-text">{{ page.text_body2 }}</p>

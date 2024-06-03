@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var modal = document.getElementById("iframeModal");
-    var btn = document.getElementById("openModalButton");
+    var btn = document.getElementById("openModal");
     var span = document.getElementsByClassName("close")[0];
 
     if (!modal) {
